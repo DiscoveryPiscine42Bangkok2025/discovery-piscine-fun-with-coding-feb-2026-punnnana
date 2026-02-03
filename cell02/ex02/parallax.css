@@ -1,0 +1,36 @@
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+.parallax {
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg1 {
+  background-image: url("img1.jpg");
+}
+
+.bg2 {
+  background-image: url("img2.jpg");
+}
+
+.text {
+  color: white;
+  font-size: 40px;
+}
+
+.block {
+  height: 300px;
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
