@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculator</title>
+</head>
+<body>
+
+	<input type="text" id="left">
+	<select id="op">
+		<option value="+">+</option>
+		<option value="-">-</option>
+		<option value="*">*</option>
+		<option value="/">/</option>
+		<option value="%">%</option>
+	</select>
+	<input type="text" id="right">
+	<button onclick="calc()">Try me!</button>
+
+	<script>
+		function isInteger(value)
+		{
+			return /^-?\d+$/.test(value);
+		}
+
+		function calc()
+		{
+			const left = document.getElementById("left").value;
+			const right = document.getElementById("right").value;
+			const op = document.getElementById("op").value;
+
+			if (!isInteger(left) || !isInteger(right))
+			{
+				alert("Error :(");
+				return;
+			}
+
+			const a = Number(left);
+			const b = Number(right);
+
+			if ((op === "/" || op === "%") && b === 0)
+			{
+				alert("Error :(");
+				return;
+			}
+
+			let result;
+			switch (op)
+			{
+				case "+": result = a + b; break;
+				case "-": result = a - b; break;
+				case "*": result = a * b; break;
+				case "/": result = a / b; break;
+				case "%": result = a % b; break;
+			}
+
+			alert(result);
+		}
+	</script>
+
+</body>
+</html>

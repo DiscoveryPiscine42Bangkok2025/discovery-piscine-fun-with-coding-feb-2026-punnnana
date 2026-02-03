@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Balloon</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<div id="balloon"></div>
+
+<script>
+$(function () {
+    var size = 200;
+    var colors = ["red", "green", "blue"];
+    var i = 0;
+
+    $("#balloon").css({
+        width: size,
+        height: size,
+        backgroundColor: colors[i],
+        borderRadius: "50%",
+        margin: "200px auto"
+    });
+
+    $("#balloon").click(function () {
+        size += 10;
+        i = (i + 1) % colors.length;
+
+        if (size > 420) size = 200;
+
+        $(this).css({
+            width: size,
+            height: size,
+            backgroundColor: colors[i]
+        });
+    });
+});
+</script>
+
+</body>
+</html>
