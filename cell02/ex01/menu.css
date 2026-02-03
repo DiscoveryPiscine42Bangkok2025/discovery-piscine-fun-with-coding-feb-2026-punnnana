@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.menu {
+    position: relative;
+    display: inline-block;
+}
+
+.btn {
+    background-color: #004b87;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+}
+
+.content a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.content a:hover {
+    background-color: #ddd;
+}
+
+.menu:hover .content {
+    display: block;
+}
