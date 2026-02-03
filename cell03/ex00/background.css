@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    background-color: white;
+}
+
+button {
+    margin: 20px;
+    padding: 6px 10px;
+    cursor: pointer;
+}
