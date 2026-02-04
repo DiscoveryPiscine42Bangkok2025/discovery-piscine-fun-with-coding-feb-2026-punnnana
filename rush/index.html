@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showcase Site - Discovery Piscine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: 'Kanit', sans-serif; 
+            /* พื้นหลังสีดำเข้ม ไล่เฉดไปสีเทาดำเพื่อให้มีมิติ */
+            background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%); 
+            height: 100vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            overflow: hidden;
+            color: #fff;
+        }
+
+        /* เพิ่มแสงฟุ้งสีแสดที่มุมซ้ายล่างให้ดูไม่มืดตึ๊ดตื๋อเกินไป */
+        body::after {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(227, 82, 5, 0.08) 0%, rgba(0,0,0,0) 70%);
+            bottom: -150px;
+            left: -150px;
+            z-index: -1;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.03); /* กล่องกระจกดำใส */
+            padding: 4rem 3rem;
+            border-radius: 40px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(227, 82, 5, 0.2); /* เส้นขอบสีแสดจางๆ */
+        }
+
+        h1 { 
+            color: #fff; 
+            margin-bottom: 0.8rem; 
+            font-size: 2.8rem;
+            font-weight: 600;
+            letter-spacing: -1px;
+        }
+
+        .highlight {
+            color: #E35205; /* เน้นคำด้วยสีแสด */
+        }
+
+        p { 
+            color: rgba(255,255,255,0.5); 
+            margin-bottom: 3rem;
+            font-size: 1rem;
+            font-weight: 300;
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn {
+            display: block;
+            padding: 20px 30px;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 20px;
+            transition: all 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        /* ปุ่มสีแสด KMITL เด่นๆ */
+        .btn-panya {
+            background-color: #E35205; 
+            color: white;
+            box-shadow: 0 10px 25px rgba(227, 82, 5, 0.3);
+        }
+
+        .btn-panya:hover { 
+            background-color: #fff; 
+            color: #E35205;
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(227, 82, 5, 0.4);
+        }
+
+        /* ปุ่มสีดำขอบแสด (Minimal Dark) */
+        .btn-saengchai {
+            background-color: transparent;
+            color: #fff;
+            border: 2px solid rgba(227, 82, 5, 0.5);
+        }
+
+        .btn-saengchai:hover { 
+            background-color: rgba(227, 82, 5, 0.1);
+            border-color: #E35205;
+            transform: translateY(-5px);
+        }
+
+        .footer-tag {
+            margin-top: 3rem;
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.2);
+            letter-spacing: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PORT<span class="highlight">FOLIO</span></h1>
+        <p>KMITL DISCOVERY PISCINE</p>
+        
+        <div class="button-group">
+            <a href="cv_panyada.html" class="btn btn-panya">Panya Srinurat</a>
+            <a href="cv_saengchai.html" class="btn btn-saengchai">Saengchai Chaolaen</a>
+        </div>
+
+        <div class="footer-tag">
+            RUSH PROJECT • 2026
+        </div>
+    </div>
+</body>
+</html>

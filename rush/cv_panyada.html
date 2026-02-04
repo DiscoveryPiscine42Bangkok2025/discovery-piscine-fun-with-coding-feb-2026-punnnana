@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panya S. - Statistics Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --orange: #E35205; --glass: rgba(255, 255, 255, 0.03); --border: rgba(255, 255, 255, 0.1); }
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+        body { 
+            font-family: 'Kanit', sans-serif; 
+            background: radial-gradient(circle at 0% 0%, rgba(227, 82, 5, 0.15) 0%, #0a0a0a 50%);
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Transparent Glass Navbar */
+        nav {
+            position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+            width: 90%; max-width: 1000px;
+            background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(15px);
+            padding: 15px 30px; border-radius: 100px;
+            display: flex; justify-content: space-between; align-items: center;
+            border: 1px solid var(--border); z-index: 1000;
+        }
+        .nav-links a { color: rgba(255, 255, 255, 0.6); text-decoration: none; margin: 0 12px; font-size: 0.8rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--orange); }
+        .exit-btn { background: var(--orange); color: #fff !important; padding: 8px 20px; border-radius: 50px; font-weight: 600; }
+
+        /* Section Layout */
+        section { min-height: 100vh; padding: 120px 10% 60px; display: flex; flex-direction: column; align-items: center; }
+        .glass-card {
+            background: var(--glass); backdrop-filter: blur(20px);
+            border-radius: 40px; border: 1px solid var(--border);
+            padding: 50px; width: 100%; max-width: 900px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            margin-bottom: 50px;
+        }
+
+        /* 1. Intro Section */
+        .profile-img { width: 180px; height: 180px; border-radius: 50%; border: 6px solid var(--orange); margin-bottom: 30px; }
+        h1 { font-size: 3.5rem; letter-spacing: -2px; line-height: 1; margin-bottom: 10px; }
+        h1 span { color: var(--orange); }
+        .subtitle { font-weight: 300; color: rgba(255,255,255,0.5); letter-spacing: 2px; text-transform: uppercase; }
+
+        /* 2. Skills Section */
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; width: 100%; }
+        .skill-item { background: rgba(255,255,255,0.05); padding: 25px; border-radius: 25px; border: 1px solid var(--border); text-align: left; }
+        .skill-item h3 { color: var(--orange); margin-bottom: 10px; font-size: 1.1rem; border-bottom: 1px solid rgba(227, 82, 5, 0.3); padding-bottom: 5px; }
+        .skill-item p { font-size: 0.9rem; line-height: 1.6; color: rgba(255,255,255,0.8); }
+
+        /* 3. Work Experience & Awards */
+        .list-item { border-left: 2px solid var(--orange); padding-left: 25px; margin-bottom: 35px; position: relative; }
+        .list-item::before { content: ""; position: absolute; left: -9px; top: 0; width: 16px; height: 16px; background: var(--orange); border-radius: 50%; }
+        .list-item h4 { font-size: 1.3rem; margin-bottom: 8px; color: #fff; }
+        .list-item span { font-size: 0.85rem; color: var(--orange); font-weight: 600; text-transform: uppercase; }
+        .list-item ul { margin-top: 10px; list-style: none; }
+        .list-item ul li { font-size: 0.95rem; color: rgba(255,255,255,0.7); margin-bottom: 5px; padding-left: 15px; position: relative; }
+        .list-item ul li::before { content: "›"; position: absolute; left: 0; color: var(--orange); }
+
+        /* 4. Contact Details */
+        .contact-info { text-align: left; display: inline-block; margin-top: 20px; }
+        .contact-link { display: block; font-size: 1.5rem; color: #fff; text-decoration: none; font-weight: 400; margin: 10px 0; transition: 0.3s; }
+        .contact-link span { color: var(--orange); font-weight: 600; }
+        .contact-link:hover { transform: translateX(10px); color: var(--orange); }
+
+        h2 { font-size: 2.5rem; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 3px; color: var(--orange); }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-links">
+            <a href="#home">INTRO</a>
+            <a href="#skills">SKILLS</a>
+            <a href="#experience">WORK</a>
+            <a href="#awards">AWARDS</a>
+            <a href="#contact">CONTACT</a>
+        </div>
+        <a href="index.html" class="exit-btn">EXIT</a>
+    </nav>
+
+    <section id="home">
+        <div class="glass-card" style="text-align: center;">
+            <img src="my-profile.jpg" class="profile-img" alt="Panya">
+            <h1>PANYA <span>SRINURAT</span></h1>
+            <p class="subtitle">Faculty of Science, Statistics (2nd Year) @KMITL | ID: 67050965</p>
+            <div style="margin-top:25px; text-align: left; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.8;">
+                <p style="color:rgba(255,255,255,0.8); margin-bottom: 15px;"><strong>Academic Goal:</strong> Focused on applying statistical theories and Machine Learning to solve complex business problems while developing expertise in data architecture.</p>
+                <p style="color:rgba(255,255,255,0.8);"><strong>Career Goal:</strong> Aspiring Data Scientist or Data Analyst in a leading tech company, dedicated to creating data-driven solutions that optimize organizational efficiency.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Expertise & Tools</h2>
+        <div class="glass-card">
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <h3>Programming</h3>
+                    <p>Python (Pandas, Numpy, Matplotlib), R, SQL, Java</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Data Analysis</h3>
+                    <p>Data Cleaning, Statistical Modeling, Correlation & Regression, Hypothesis Testing</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Visualization</h3>
+                    <p>Excel, Tableau (Basic), R ggplot2</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Other Tools</h3>
+                    <p>VS Code, RStudio, Google Sheets</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Soft Skills</h3>
+                    <p>Analytical Thinking, Problem Solving, Communication, Teamwork, Adaptability</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Project Portfolio</h2>
+        <div class="glass-card" style="position: relative;">
+            
+            <div class="list-item">
+                <span>Business Analysis</span>
+                <h4>State Railway of Thailand Project</h4>
+                <ul>
+                    <li>Conducted customer data analysis to identify service pain points.</li>
+                    <li>Proposed actionable solutions based on data insights and survey feedback.</li>
+                </ul>
+            </div>
+
+            <div class="list-item">
+                <span>Data Science</span>
+                <h4>Healthcare Cost Prediction Project</h4>
+                <ul>
+                    <li>Cleaned and analyzed raw data to identify factors influencing medical expenses.</li>
+                    <li>Built regression models in R and evaluated model assumptions.</li>
+                </ul>
+            </div>
+
+            <div class="list-item">
+                <span>Operations Research</span>
+                <h4>Oat Milk Import Business Project</h4>
+                <ul>
+                    <li>Studied Customer Journey and applied Business Model Canvas.</li>
+                    <li>Formulated key business problems and proposed data-driven solutions.</li>
+                </ul>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 30px;">
+                <p style="color: rgba(255,255,255,0.4); font-size: 0.85rem; margin-bottom: 15px;">Want to see more technical details?</p>
+                <a href="https://github.com/punnnana" target="_blank" 
+                   style="display: inline-block; padding: 12px 35px; background: rgba(255,255,255,0.05); 
+                          color: var(--orange); text-decoration: none; border-radius: 100px; 
+                          border: 1px solid var(--orange); font-weight: 600; font-size: 0.9rem; 
+                          transition: 0.3s; backdrop-filter: blur(5px);">
+                    View All Projects on GitHub
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="awards">
+        <h2>Awards & Achievements</h2>
+        <div class="glass-card">
+            
+            <div class="list-item">
+                <span>Winner</span>
+                <h4>Analysis Project – State Railway of Thailand</h4>
+                <p style="color:rgba(255,255,255,0.6); font-size: 0.9rem;">First place for presenting a delay-reduction model through passenger data analytics.</p>
+            </div>
+
+            <div class="list-item">
+                <span>Finalist</span>
+                <h4>KGL Algo Trading Competition 2025</h4>
+                <p style="color:rgba(255,255,255,0.6); font-size: 0.9rem;">Finalist in developing trading bots using statistical models and algorithms.</p>
+            </div>
+
+            <div class="list-item">
+                <span>Certificate</span>
+                <h4>Data Visualization Challenge @KMITL</h4>
+                <p style="color:rgba(255,255,255,0.6); font-size: 0.9rem;">Honorable mention for creating a quarterly economic summary dashboard via Tableau.</p>
+            </div>
+
+            <div class="list-item">
+                <span>Academic Award</span>
+                <h4>Statistics Excellence Award 2024</h4>
+                <p style="color:rgba(255,255,255,0.6); font-size: 0.9rem;">Recognized for outstanding performance in Probability Theory and Introductory Statistics.</p>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 30px;">
+                <p style="color: rgba(255,255,255,0.4); font-size: 0.85rem; margin-bottom: 15px;">Explore more certificates and detailed documentation</p>
+                <a href="https://github.com/punnnana" target="_blank" 
+                   style="display: inline-block; padding: 12px 35px; background: rgba(255,255,255,0.05); 
+                          color: var(--orange); text-decoration: none; border-radius: 100px; 
+                          border: 1px solid var(--orange); font-weight: 600; font-size: 0.9rem; 
+                          transition: 0.3s; backdrop-filter: blur(5px);">
+                    View Credentials on GitHub
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Get in touch</h2>
+        <div class="glass-card" style="text-align: center;">
+            <p style="margin-bottom: 20px; font-weight: 300; color:rgba(255,255,255,0.6);">Ready to collaborate on data-driven projects.</p>
+            
+            <div class="contact-info">
+                <a href="https://github.com/punnnana" target="_blank" class="contact-link"><span>GitHub:</span> punnnana</a>
+                <a href="mailto:panyada.snr@gmail.com" class="contact-link"><span>Gmail:</span> panyada.snr@gmail.com</a>
+                <a href="tel:0808636312" class="contact-link"><span>Phone:</span> 080-863-6312</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

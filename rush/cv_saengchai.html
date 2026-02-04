@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saengchai C. - Professional Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --orange: #E35205; --glass: rgba(255, 255, 255, 0.03); --border: rgba(255, 255, 255, 0.1); }
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+        body { 
+            font-family: 'Kanit', sans-serif; 
+            background: radial-gradient(circle at 0% 0%, rgba(227, 82, 5, 0.15) 0%, #0a0a0a 50%);
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Transparent Glass Navbar */
+        nav {
+            position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+            width: 90%; max-width: 1000px;
+            background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(15px);
+            padding: 15px 30px; border-radius: 100px;
+            display: flex; justify-content: space-between; align-items: center;
+            border: 1px solid var(--border); z-index: 1000;
+        }
+        .nav-links a { color: rgba(255, 255, 255, 0.6); text-decoration: none; margin: 0 12px; font-size: 0.8rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--orange); }
+        .exit-btn { background: var(--orange); color: #fff !important; padding: 8px 20px; border-radius: 50px; font-weight: 600; }
+
+        /* Section Layout */
+        section { min-height: 100vh; padding: 120px 10% 60px; display: flex; flex-direction: column; align-items: center; }
+        .glass-card {
+            background: var(--glass); backdrop-filter: blur(20px);
+            border-radius: 40px; border: 1px solid var(--border);
+            padding: 50px; width: 100%; max-width: 900px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            margin-bottom: 50px;
+        }
+
+        /* 1. Intro Section */
+        .profile-img { width: 180px; height: 180px; border-radius: 50%; border: 6px solid var(--orange); margin-bottom: 30px; }
+        h1 { font-size: 3.5rem; letter-spacing: -2px; line-height: 1; margin-bottom: 10px; }
+        h1 span { color: var(--orange); }
+        .subtitle { font-weight: 300; color: rgba(255,255,255,0.5); letter-spacing: 2px; }
+
+        /* 2. Skills Section (Grid Layout) */
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; width: 100%; }
+        .skill-item { background: rgba(255,255,255,0.05); padding: 25px; border-radius: 25px; border: 1px solid var(--border); text-align: center; }
+        .skill-item h3 { color: var(--orange); margin-bottom: 10px; font-size: 1rem; }
+
+        /* 3. Work Experience & Awards (Timeline style) */
+        .list-item { border-left: 2px solid var(--orange); padding-left: 25px; margin-bottom: 30px; position: relative; }
+        .list-item::before { content: ""; position: absolute; left: -9px; top: 0; width: 16px; height: 16px; background: var(--orange); border-radius: 50%; }
+        .list-item h4 { font-size: 1.2rem; margin-bottom: 5px; }
+        .list-item span { font-size: 0.8rem; color: var(--orange); font-weight: 600; }
+
+        /* 4. Contact */
+        .contact-btn { font-size: 2rem; color: #fff; text-decoration: none; font-weight: 600; border-bottom: 4px solid var(--orange); transition: 0.3s; }
+        .contact-btn:hover { color: var(--orange); }
+
+        h2 { font-size: 2.5rem; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 3px; color: var(--orange); }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-links">
+            <a href="#home">INTRO</a>
+            <a href="#skills">SKILLS</a>
+            <a href="#experience">WORK</a>
+            <a href="#awards">AWARDS</a>
+            <a href="#contact">CONTACT</a>
+        </div>
+        <a href="index.html" class="exit-btn">EXIT</a>
+    </nav>
+
+    <section id="home">
+        <div class="glass-card" style="text-align: center;">
+            <img src="sangchai.png" class="profile-img" alt="Saengchai">
+            <h1>SAENGCHAI <span>CHAOLAEN</span></h1>
+            <p class="subtitle">School of Integrated Innovative Technology @KMITL | ID: 67125039</p>
+            <p style="margin-top:20px; color:rgba(255,255,255,0.7);">Engineering student with a focus on problem-solving and modern development.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Expertise</h2>
+        <div class="glass-card">
+            <div class="skills-grid">
+                <div class="skill-item"><h3>Signal & Systems Engineering</h3><p>Signal Processing System Design,AI-enhanced LLR Processing,System Modeling & Optimization,Electronic Fundamentals</p></div>
+                <div class="skill-item"><h3>Software & Algorithm Development</h3><p>HTML, CSS Fundamentals,Algorithm Implementation,Data Processing using AI,Basic Scripting Tools</p></div>
+                <div class="skill-item"><h3>Technical Operations & Maintenance</h3><p>Computer Maintenance & Repair,Basic Electrical/Electronics Troubleshooting,System Installation Support</p></div>
+                <div class="skill-item"><h3>Quality Control & InspectionAnalysis</h3><p>Product Quality Inspection,Production Line Support,Report & Data Recording</p></div>
+                <div class="skill-item"><h3>AnalysisResearch & Technical Presentation</h3><p>MLP-based LLR Improvement Research,Academic Paper Presentation,Engineering Experimentation</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Work Experience</h2>
+        <div class="glass-card">
+            <div class="list-item">
+                <span>May – September 2023 </span>
+                <h4>Quality Control Intern — Thai Koito Co., Ltd.</h4>
+                <p>Inspected product quality throughout the production process to ensure compliance with standards.</p>
+                <p>Recorded, organized, and reported inspection results in a clear and accurate manner.</p>
+                <p>Supported production line operations and collaborated with quality control teams on assigned tasks.</p>
+            </div>
+            <div class="list-item">
+                <span>October 2021 – February 2022</span>
+                <h4>Technician Intern — A&P Com System</h4>
+                <p>Assisted with basic electrical and electronic system installation.</p>
+                <p>Performed maintenance and repair of electrical appliances and computer systems.</p>
+                <p>Troubleshooted computer hardware/software problems and handled general IT support tasks.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="awards">
+        <h2>Awards</h2>
+        <div class="glass-card">
+            <div class="list-item">
+                <span>7th ASEAN UEC Workshop on Informatics and Engineering (2025)</span>
+                <h4>Young Researcher Encouragement Award</h4>
+                <p>Awarded for outstanding presentation of the research</p>
+                <p>“Multilayer Perceptron Based LLR Improvement for Staggered Bit-Patterned Magnetic Recording Systems.”</p>
+            </div>
+            <div class="list-item">
+                <span>3-Star Award — Smart Invention & Innovation (2023)</span>
+                <h4>National Research Council of Thailand (NRCT)</h4>
+                <p>Awarded for the project</p>
+                <p>“Automatic Water Quality Adjustment Machine for Fish Farming.”</p>
+            </div>
+            <div class="list-item">
+                <span>Gold Medal — Microcontroller Skills Competition(2022)</span>
+                <h4>Prachinburi Provincial Level</h4>
+                <p>Awarded for outstanding presentation of the research</p>
+                <p>Recognized for excellence in microcontroller programming and system implementation.</p>
+            </div>
+            <div class="list-item">
+                <span>Silver Medal — National Vocational Skills Competition (2020)</span>
+                <h4>Mobile Amplifier Assembly & Testing — Regional Level</h4>
+                <p>Awarded for outstanding presentation of the research</p>
+                <p>Demonstrated high-level skills in assembling, testing, and troubleshooting mobile amplifier systems.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Get in touch</h2>
+        <div class="glass-card" style="text-align: center; background: rgba(227, 82, 5, 0.05);">
+            <p style="margin-bottom: 30px;">Let's work together on something great.</p>
+            <a href="mailto:67125039@kmitl.ac.th" class="contact-btn">67125039@kmitl.ac.th</a>
+        </div>
+    </section>
+
+</body>
+</html>
