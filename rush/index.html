@@ -10,7 +10,6 @@
         
         body { 
             font-family: 'Kanit', sans-serif; 
-            /* พื้นหลังสีดำเข้ม ไล่เฉดไปสีเทาดำเพื่อให้มีมิติ */
             background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%); 
             height: 100vh; 
             display: flex; 
@@ -20,7 +19,6 @@
             color: #fff;
         }
 
-        /* เพิ่มแสงฟุ้งสีแสดที่มุมซ้ายล่างให้ดูไม่มืดตึ๊ดตื๋อเกินไป */
         body::after {
             content: "";
             position: absolute;
@@ -33,7 +31,7 @@
         }
 
         .container {
-            background: rgba(255, 255, 255, 0.03); /* กล่องกระจกดำใส */
+            background: rgba(255, 255, 255, 0.03); 
             padding: 4rem 3rem;
             border-radius: 40px;
             box-shadow: 0 30px 60px rgba(0,0,0,0.5);
@@ -41,7 +39,7 @@
             max-width: 500px;
             width: 90%;
             backdrop-filter: blur(20px);
-            border: 1px solid rgba(227, 82, 5, 0.2); /* เส้นขอบสีแสดจางๆ */
+            border: 1px solid rgba(227, 82, 5, 0.2); 
         }
 
         h1 { 
@@ -53,7 +51,7 @@
         }
 
         .highlight {
-            color: #E35205; /* เน้นคำด้วยสีแสด */
+            color: #E35205; 
         }
 
         p { 
@@ -81,7 +79,6 @@
             letter-spacing: 1.5px;
         }
 
-        /* ปุ่มสีแสด KMITL เด่นๆ */
         .btn-panya {
             background-color: #E35205; 
             color: white;
@@ -95,7 +92,6 @@
             box-shadow: 0 15px 35px rgba(227, 82, 5, 0.4);
         }
 
-        /* ปุ่มสีดำขอบแสด (Minimal Dark) */
         .btn-saengchai {
             background-color: transparent;
             color: #fff;

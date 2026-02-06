@@ -17,7 +17,6 @@
             overflow-x: hidden;
         }
 
-        /* Transparent Glass Navbar */
         nav {
             position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
             width: 90%; max-width: 1000px;
@@ -30,7 +29,6 @@
         .nav-links a:hover { color: var(--orange); }
         .exit-btn { background: var(--orange); color: #fff !important; padding: 8px 20px; border-radius: 50px; font-weight: 600; }
 
-        /* Section Layout */
         section { min-height: 100vh; padding: 120px 10% 60px; display: flex; flex-direction: column; align-items: center; }
         .glass-card {
             background: var(--glass); backdrop-filter: blur(20px);
@@ -40,19 +38,16 @@
             margin-bottom: 50px;
         }
 
-        /* 1. Intro Section */
         .profile-img { width: 180px; height: 180px; border-radius: 50%; border: 6px solid var(--orange); margin-bottom: 30px; }
         h1 { font-size: 3.5rem; letter-spacing: -2px; line-height: 1; margin-bottom: 10px; }
         h1 span { color: var(--orange); }
         .subtitle { font-weight: 300; color: rgba(255,255,255,0.5); letter-spacing: 2px; text-transform: uppercase; }
 
-        /* 2. Skills Section */
         .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; width: 100%; }
         .skill-item { background: rgba(255,255,255,0.05); padding: 25px; border-radius: 25px; border: 1px solid var(--border); text-align: left; }
         .skill-item h3 { color: var(--orange); margin-bottom: 10px; font-size: 1.1rem; border-bottom: 1px solid rgba(227, 82, 5, 0.3); padding-bottom: 5px; }
         .skill-item p { font-size: 0.9rem; line-height: 1.6; color: rgba(255,255,255,0.8); }
 
-        /* 3. Work Experience & Awards */
         .list-item { border-left: 2px solid var(--orange); padding-left: 25px; margin-bottom: 35px; position: relative; }
         .list-item::before { content: ""; position: absolute; left: -9px; top: 0; width: 16px; height: 16px; background: var(--orange); border-radius: 50%; }
         .list-item h4 { font-size: 1.3rem; margin-bottom: 8px; color: #fff; }
@@ -61,7 +56,6 @@
         .list-item ul li { font-size: 0.95rem; color: rgba(255,255,255,0.7); margin-bottom: 5px; padding-left: 15px; position: relative; }
         .list-item ul li::before { content: "›"; position: absolute; left: 0; color: var(--orange); }
 
-        /* 4. Contact Details */
         .contact-info { text-align: left; display: inline-block; margin-top: 20px; }
         .contact-link { display: block; font-size: 1.5rem; color: #fff; text-decoration: none; font-weight: 400; margin: 10px 0; transition: 0.3s; }
         .contact-link span { color: var(--orange); font-weight: 600; }

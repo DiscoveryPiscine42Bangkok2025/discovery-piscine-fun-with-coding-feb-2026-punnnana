@@ -17,7 +17,6 @@
             overflow-x: hidden;
         }
 
-        /* Transparent Glass Navbar */
         nav {
             position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
             width: 90%; max-width: 1000px;
@@ -30,7 +29,6 @@
         .nav-links a:hover { color: var(--orange); }
         .exit-btn { background: var(--orange); color: #fff !important; padding: 8px 20px; border-radius: 50px; font-weight: 600; }
 
-        /* Section Layout */
         section { min-height: 100vh; padding: 120px 10% 60px; display: flex; flex-direction: column; align-items: center; }
         .glass-card {
             background: var(--glass); backdrop-filter: blur(20px);
@@ -40,24 +38,20 @@
             margin-bottom: 50px;
         }
 
-        /* 1. Intro Section */
         .profile-img { width: 180px; height: 180px; border-radius: 50%; border: 6px solid var(--orange); margin-bottom: 30px; }
         h1 { font-size: 3.5rem; letter-spacing: -2px; line-height: 1; margin-bottom: 10px; }
         h1 span { color: var(--orange); }
         .subtitle { font-weight: 300; color: rgba(255,255,255,0.5); letter-spacing: 2px; }
 
-        /* 2. Skills Section (Grid Layout) */
         .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; width: 100%; }
         .skill-item { background: rgba(255,255,255,0.05); padding: 25px; border-radius: 25px; border: 1px solid var(--border); text-align: center; }
         .skill-item h3 { color: var(--orange); margin-bottom: 10px; font-size: 1rem; }
 
-        /* 3. Work Experience & Awards (Timeline style) */
         .list-item { border-left: 2px solid var(--orange); padding-left: 25px; margin-bottom: 30px; position: relative; }
         .list-item::before { content: ""; position: absolute; left: -9px; top: 0; width: 16px; height: 16px; background: var(--orange); border-radius: 50%; }
         .list-item h4 { font-size: 1.2rem; margin-bottom: 5px; }
         .list-item span { font-size: 0.8rem; color: var(--orange); font-weight: 600; }
 
-        /* 4. Contact */
         .contact-btn { font-size: 2rem; color: #fff; text-decoration: none; font-weight: 600; border-bottom: 4px solid var(--orange); transition: 0.3s; }
         .contact-btn:hover { color: var(--orange); }
 
